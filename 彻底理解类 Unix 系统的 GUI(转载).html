@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>weilai</title>
-        <meta name="robots" content="noindex" />
+        <title>彻底理解类unix的gui（转载） - weilai</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -76,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">2.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html"><strong aria-hidden="true">3.</strong> 彻底理解类unix的gui（转载）</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">2.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html" class="active"><strong aria-hidden="true">3.</strong> 彻底理解类unix的gui（转载）</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,95 +134,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="conda-command"><a class="header" href="#conda-command">conda command</a></h1>
-<p>[toc]</p>
-<h2 id="创建查看删除环境"><a class="header" href="#创建查看删除环境">创建、查看、删除环境</a></h2>
-<pre><code>create $    conda create -n &lt;name&gt; python=x.x
-check  $    conda env list 
-delete $    conda remove -n &lt;name&gt; --all
-</code></pre>
-<ul>
-<li>在<code>create</code>中，可以在名字后面添加python的指定版本</li>
-</ul>
-<h2 id="基础管理命令"><a class="header" href="#基础管理命令"><em>基础管理命令</em></a></h2>
-<h3 id="1查看版本信息"><a class="header" href="#1查看版本信息">1.查看版本信息</a></h3>
-<p><strong>查看当前版本</strong></p>
-<pre><code>conda --version
-conda -V
-</code></pre>
-<p><strong>更新到当前版本</strong></p>
-<p><code>conda update conda</code></p>
-<h3 id="2管理环境"><a class="header" href="#2管理环境">2.管理环境</a></h3>
-<h4 id="21创建一个新环境"><a class="header" href="#21创建一个新环境"><strong>2.1创建一个新环境</strong></a></h4>
-<p><code>conda create --name &lt;xxx&gt;</code></p>
-<h4 id="22使用或激活新环境"><a class="header" href="#22使用或激活新环境"><strong>2.2使用或激活新环境</strong></a></h4>
-<p><code>conda activate &lt;xxx&gt;</code></p>
-<h4 id="23查看所有环境列表"><a class="header" href="#23查看所有环境列表"><strong>2.3查看所有环境列表</strong></a></h4>
-<p><code>conda info --envs</code></p>
-<h4 id="24将当前环境改为默认环境base"><a class="header" href="#24将当前环境改为默认环境base"><strong>2.4将当前环境改为默认环境（base）</strong></a></h4>
-<p><code>conda activate</code></p>
-<h3 id="3管理python"><a class="header" href="#3管理python">3.管理Python</a></h3>
-<h4 id="31创建新环境并包含自定义python版本"><a class="header" href="#31创建新环境并包含自定义python版本"><strong>3.1创建新环境并包含自定义Python版本</strong></a></h4>
-<ul>
-<li>创建一个名为“蛇”的新环境，其中包含Python 3.9</li>
-</ul>
-<p><code>conda create --name snakes python=3.9</code></p>
-<h4 id="32验证当前环境python的版本"><a class="header" href="#32验证当前环境python的版本"><strong>3.2验证当前环境Python的版本</strong></a></h4>
-<p><code>python --version</code></p>
-<h4 id="33停用当前环境返回默认环境"><a class="header" href="#33停用当前环境返回默认环境"><strong>3.3停用当前环境，返回默认环境</strong></a></h4>
-<p><code>conda activate</code></p>
-<h3 id="4管理软件包"><a class="header" href="#4管理软件包">4.管理软件包</a></h3>
-<h4 id="41激活要搜索的环境"><a class="header" href="#41激活要搜索的环境"><strong>4.1激活要搜索的环境</strong></a></h4>
-<p><code>conda activate &lt;xxx&gt;</code></p>
-<h4 id="42搜索软件包"><a class="header" href="#42搜索软件包"><strong>4.2搜索软件包</strong></a></h4>
-<ul>
-<li>检查您尚未安装的名为“beautifulsoup4”的软件包是否可以从Anaconda存储库中获取</li>
-</ul>
-<p><code>conda search beautifulsoup4</code></p>
-<h4 id="43安装到当前环境"><a class="header" href="#43安装到当前环境"><strong>4.3安装到当前环境</strong></a></h4>
-<p><code>conda install beautifulsoup4</code></p>
-<h4 id="44检查是否安装"><a class="header" href="#44检查是否安装"><strong>4.4检查是否安装</strong></a></h4>
-<p><code>conda list</code></p>
-<h4 id="45搜索当前环境中某个特定包"><a class="header" href="#45搜索当前环境中某个特定包"><strong>4.5搜索当前环境中某个特定包</strong></a></h4>
-<p><code>conda list &lt;xxx&gt;</code></p>
-<h2 id="命令参考"><a class="header" href="#命令参考"><em>命令参考</em></a></h2>
-<h3 id="基础命令"><a class="header" href="#基础命令">基础命令</a></h3>
-<h4 id="1查看所有帮助"><a class="header" href="#1查看所有帮助"><strong>1.查看所有帮助</strong></a></h4>
-<pre><code>conda --help
-conda install --helo
-</code></pre>
-<h4 id="2conda-clean"><a class="header" href="#2conda-clean"><strong>2.conda clean</strong></a></h4>
-<p><strong>删除未使用的软件包和缓存</strong></p>
-<ul>
-<li>-a,--all</li>
-</ul>
-<p>删除索引缓存、锁定文件、未使用的缓存包和tarballs.</p>
-<ul>
-<li>-i,--index-cache</li>
-</ul>
-<p>删除索引缓存。</p>
-<ul>
-<li>-p,--pachages</li>
-</ul>
-<p>从可写包缓存中删除未使用的软件包。警告：这不会检查使用符号链接安装到软件包缓存的软件包。</p>
-<ul>
-<li>-t,--tarballs</li>
-</ul>
-<p>删除缓存包裹，压缩包。</p>
-<h4 id="3conda-cpmoare"><a class="header" href="#3conda-cpmoare"><strong>3.conda cpmoare</strong></a></h4>
-<h4 id="4conda-config"><a class="header" href="#4conda-config"><strong>4.conda config</strong></a></h4>
-<h4 id="5conda-create"><a class="header" href="#5conda-create"><strong>5.conda create</strong></a></h4>
-<h4 id="6conda-info"><a class="header" href="#6conda-info"><strong>6.conda info</strong></a></h4>
-<h4 id="7conda-install"><a class="header" href="#7conda-install"><strong>7.conda install</strong></a></h4>
-<h4 id="8conda-list"><a class="header" href="#8conda-list"><strong>8.conda list</strong></a></h4>
-<h4 id="9conda-package"><a class="header" href="#9conda-package"><strong>9.conda package</strong></a></h4>
-<h4 id="10conda-remove"><a class="header" href="#10conda-remove"><strong>10.conda remove</strong></a></h4>
-<h4 id="11conda-run"><a class="header" href="#11conda-run"><strong>11.conda run</strong></a></h4>
-<h4 id="12conda-search"><a class="header" href="#12conda-search"><strong>12.conda search</strong></a></h4>
-<h4 id="13conda-update"><a class="header" href="#13conda-update"><strong>13.conda update</strong></a></h4>
-<h3 id="conda-vspip-vsvirtualenv"><a class="header" href="#conda-vspip-vsvirtualenv">Conda vs.pip vs.virtualenv</a></h3>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="彻底理解类-unix-系统的-gui转载"><a class="header" href="#彻底理解类-unix-系统的-gui转载">彻底理解类 Unix 系统的 GUI（转载）</a></h1>
+                        <h1 id="彻底理解类-unix-系统的-gui转载"><a class="header" href="#彻底理解类-unix-系统的-gui转载">彻底理解类 Unix 系统的 GUI（转载）</a></h1>
 <p>Unix/Linux 这类系统本身没有图形界面，图形界面的实现只是系统中的一个应用程序而已。换言之，图形界面并不是操作系统本身的一部分，Unix/Linux 就是一个基于 shell 命令行的操作系统。</p>
 <p>Windows 系统则不同，从 Windows95 开始，系统内核中就已经包含了图形系统，也就是说，图形界面是操作系统本身的一部分。因此，Windows 这样的系统，在图形桌面上的表现远远超过 Unix/Linux，由此才占据了 PC 市场的主要份额。</p>
 <p>随着时代发展，类 Unix 系统也产生了图形界面的需求，为了解决这个问题，出现了 X Window System[<a href="https://muzing.top/posts/5360db82/#fn:1">1]</a>。</p>
@@ -433,12 +344,18 @@ conda install --helo
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="conda command.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="conda command.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
             </nav>
 
         </div>
@@ -454,10 +371,5 @@ conda install --helo
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
     </body>
 </html>
