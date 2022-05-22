@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Homebrew command - weilai</title>
+        <title>Markdown - weilai</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="简介.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li class="chapter-item expanded "><a href="Homebrew code.html" class="active"><strong aria-hidden="true">2.</strong> Homebrew command</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">3.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html"><strong aria-hidden="true">4.</strong> 彻底理解类unix的gui（转载）</a></li><li class="chapter-item expanded "><a href="Markdown格式教程.html"><strong aria-hidden="true">5.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="Shell instruction .html"><strong aria-hidden="true">6.</strong> Linux Shell command</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="简介.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li class="chapter-item expanded "><a href="Homebrew code.html"><strong aria-hidden="true">2.</strong> Homebrew command</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">3.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html"><strong aria-hidden="true">4.</strong> 彻底理解类unix的gui（转载）</a></li><li class="chapter-item expanded "><a href="Markdown格式教程.html" class="active"><strong aria-hidden="true">5.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="Shell instruction .html"><strong aria-hidden="true">6.</strong> Linux Shell command</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -134,94 +134,119 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="brew"><a class="header" href="#brew">Brew</a></h1>
+                        <h1 id="markdown格式教程"><a class="header" href="#markdown格式教程">Markdown格式教程</a></h1>
+<blockquote>
+<p>markdown格式的讲解</p>
+<p>面向初学者</p>
+<p>编写者：wzj</p>
+<p><a href="https://thu-ios.github.io/tutorials/lecture/markdown.html">参考网站</a> —— 作者：yxj</p>
+</blockquote>
 <p>[toc]</p>
-<h2 id="安装"><a class="header" href="#安装">安装</a></h2>
-<p>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</p>
-<h2 id="卸载"><a class="header" href="#卸载">卸载</a></h2>
-<p>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)&quot;
-(下载卸载脚本并运行 /bin/bash uninstall.sh --help 查看更多卸载选项。)</p>
-<h2 id="1信息查询"><a class="header" href="#1信息查询">1.信息查询</a></h2>
-<h3 id="查看-homebrew-版本"><a class="header" href="#查看-homebrew-版本">查看 Homebrew 版本</a></h3>
-<p>➜  ~ brew -v</p>
-<h3 id="列出已安装的软件"><a class="header" href="#列出已安装的软件">列出已安装的软件</a></h3>
-<p>➜  ~ brew list</p>
-<h3 id="使用浏览器打开-brew-官网"><a class="header" href="#使用浏览器打开-brew-官网">使用浏览器打开 brew 官网</a></h3>
-<p>➜  ~ brew home</p>
-<h3 id="查看包的详细信息"><a class="header" href="#查看包的详细信息">查看包的详细信息</a></h3>
-<p>➜  ~ brew info 包名</p>
-<h3 id="检测系统中与brew-有关的潜在问题"><a class="header" href="#检测系统中与brew-有关的潜在问题">检测系统中与brew 有关的潜在问题</a></h3>
-<p>➜  ~ brew doctor</p>
-<h3 id="查看包的所有版本"><a class="header" href="#查看包的所有版本">查看包的所有版本</a></h3>
-<p>➜  ~ brew list --versions | grep 包名</p>
-<h3 id="以树形展示所有已安装包的依赖"><a class="header" href="#以树形展示所有已安装包的依赖">以树形展示所有已安装包的依赖</a></h3>
-<p>➜  ~ brew deps --installed --tree</p>
-<h2 id="2查找包"><a class="header" href="#2查找包">2.查找包</a></h2>
-<p>➜  ~ brew search git
-➜  ~ brew search /^git$/</p>
-<h2 id="3安装包"><a class="header" href="#3安装包">3.安装包</a></h2>
-<p>➜  ~ brew install 包名</p>
-<h2 id="4卸载"><a class="header" href="#4卸载">4.卸载</a></h2>
-<p>➜  ~ brew uninstall 包名</p>
-<h2 id="5自身更新"><a class="header" href="#5自身更新">5.自身更新</a></h2>
-<p>➜  ~ brew update</p>
-<h2 id="6更新包"><a class="header" href="#6更新包">6.更新包</a></h2>
-<h3 id="查看哪些包有新版本可更新"><a class="header" href="#查看哪些包有新版本可更新">查看哪些包有新版本可更新</a></h3>
-<p>➜  ~ brew outdated</p>
-<h3 id="更新所有包"><a class="header" href="#更新所有包">更新所有包</a></h3>
-<p>➜  ~ brew upgrade</p>
-<h3 id="更新指定包"><a class="header" href="#更新指定包">更新指定包</a></h3>
-<p>➜  ~ brew upgrade 包名</p>
-<h2 id="7清理旧包"><a class="header" href="#7清理旧包">7.清理旧包</a></h2>
-<p>⚠️ 注意：如果一个包当前有可更新的版本没有更新，执行清理时候只会提示一个警告，而不会执行清理操作。
-⚠️ 需要先升级到最新版本，值执行清理。 </p>
-<h3 id="查看哪些包可清理"><a class="header" href="#查看哪些包可清理">查看哪些包可清理</a></h3>
-<p>➜  ~ brew cleanup -n</p>
-<h3 id="清理所有"><a class="header" href="#清理所有">清理所有</a></h3>
-<p>➜  ~ brew cleanup</p>
-<h3 id="清理指定包"><a class="header" href="#清理指定包">清理指定包</a></h3>
-<p>➜  ~ brew cleanup 包名</p>
-<h2 id="8锁定不想更新的包"><a class="header" href="#8锁定不想更新的包">8.锁定不想更新的包</a></h2>
-<h3 id="锁定"><a class="header" href="#锁定">锁定</a></h3>
-<p>➜  ~ brew pin 包名</p>
-<h3 id="解锁"><a class="header" href="#解锁">解锁</a></h3>
-<p>➜  ~ brew unpin 包名</p>
-<h2 id="9关联包"><a class="header" href="#9关联包">9.关联包</a></h2>
-<h3 id="清理无效的关联且清理与之相关的位于applications和applications中的无用app链接"><a class="header" href="#清理无效的关联且清理与之相关的位于applications和applications中的无用app链接">清理无效的关联，且清理与之相关的位于/Applications和~/Applications中的无用App链接</a></h3>
-<p>➜  ~ brew prune</p>
-<h3 id="将指定软件的安装文件symlink到homebrew上"><a class="header" href="#将指定软件的安装文件symlink到homebrew上">将指定软件的安装文件symlink到Homebrew上</a></h3>
-<p>➜  ~ brew link 包名</p>
-<h2 id="其他指令"><a class="header" href="#其他指令">其他指令</a></h2>
-<p>brew help
-Example usage:
-brew search TEXT|/REGEX/
-brew info [FORMULA|CASK...]
-brew install FORMULA|CASK...
-brew update
-brew upgrade [FORMULA|CASK...]
-brew uninstall FORMULA|CASK...
-brew list [FORMULA|CASK...]</p>
-<p>Troubleshooting:
-brew config
-brew doctor
-brew install --verbose --debug FORMULA|CASK</p>
-<p>Contributing:
-brew create URL [--no-fetch]
-brew edit [FORMULA|CASK...]</p>
-<p>Further help:
-brew commands
-brew help [COMMAND]
-man brew
-https://docs.brew.sh</p>
+<h2 id="具体语法"><a class="header" href="#具体语法"><em>具体语法</em></a></h2>
+<h3 id="1关于标题"><a class="header" href="#1关于标题">1.关于标题</a></h3>
+<p>1～6个井号加一个空格再加上标题的名称
+标题的等级由<code>#</code>的数量来决定</p>
+<pre><code># 一级标题
+## 二级
+......
+###### 六级
+</code></pre>
+<h3 id="2关于文体"><a class="header" href="#2关于文体">2.关于文体</a></h3>
+<h4 id="加粗和斜体"><a class="header" href="#加粗和斜体"><strong>加粗和斜体</strong></a></h4>
+<p>可以使用*或者_来加粗和添加斜体</p>
+<pre><code class="language-swift">*hello world*
+_hello world_
+
+**hello world**
+__hello world__
+</code></pre>
+<p>输出样子：
+<em>hello world</em>
+<em>hello world</em></p>
+<p><strong>hello world</strong>
+<strong>hello world</strong></p>
+<p>注意：*或者_之间不能有空格，不然会失效。</p>
+<h3 id="3链接语法"><a class="header" href="#3链接语法">3.链接语法</a></h3>
+<h4 id="链接网站"><a class="header" href="#链接网站"><strong>链接网站</strong></a></h4>
+<p><code>[题目](网站链接)</code> :中括号和小括号结合</p>
+<pre><code>[github](https://github.com)
+</code></pre>
+<p>输出结果：
+<a href="https://github.com">github</a></p>
+<h4 id="直接标出网站"><a class="header" href="#直接标出网站"><strong>直接标出网站</strong></a></h4>
+<pre><code>&lt;https://github.com&gt;
+</code></pre>
+<p>输出结果：
+<a href="https://github.com">https://github.com</a></p>
+<h4 id="链接图片"><a class="header" href="#链接图片"><strong>链接图片</strong></a></h4>
+<p><code>![自己选择写不写] (网站)</code>
+这里<code>[]</code>内部可以不写任何文字，也可以输出，写了的话会在图片下方或某处显示说明，当因为某种原因图片无法加载的时候，显示时也会用说明替代图片。</p>
+<pre><code>![iphone13 pro](https://www.apple.com.cn/v/iphone-13-pro/f/images/overview/design/design_display_pro__d3dtminb414y_small_2x.png)
+</code></pre>
+<p>输出结果：
+<img src="https://www.apple.com.cn/v/iphone-13-pro/f/images/overview/design/design_display_pro__d3dtminb414y_small_2x.png" alt="iphone13 pro" /></p>
+<h3 id="4行内代码"><a class="header" href="#4行内代码">4.行内代码</a></h3>
+<h4 id="行内代码标注某一个"><a class="header" href="#行内代码标注某一个"><strong>行内代码，标注某一个</strong></a></h4>
+<p>使用英文标点符号   <strong>`</strong> ,在tab上面</p>
+<pre><code class="language-swift">`swift`和`github`都是大大的好东西 
+</code></pre>
+<p><code>swift</code>和<code>github</code>都是大大的好东西</p>
+<h4 id="注释代码块"><a class="header" href="#注释代码块"><strong>注释代码块</strong></a></h4>
+<p>一对，三个，英文符号  <strong>`</strong>  来包裹代码块，还可以第一个反撇后面添加语言来获得高亮支持</p>
+<p>```swift
+var natural_number: Arrary<Int> = [0,1,2,3]
+print(natural_numbers.capacity)
+```</p>
+<pre><code class="language-swift">var natural_number: Arrary&lt;Int&gt; = [0,1,2,3]
+print(natural_numbers.capacity)
+
+</code></pre>
+<p>支持高亮的代码很多，比如：<code>shell</code>,<code>c</code>,<code>c++</code>,<code>java</code>,<code>python</code>,<code>swift</code>,<code>html</code>.</p>
+<h4 id="引用的格式"><a class="header" href="#引用的格式"><strong>引用的格式</strong></a></h4>
+<pre><code>&gt;markdown的格式讲解
+&gt;面向初学者
+</code></pre>
+<blockquote>
+<p>markdown的格式讲解
+面向初学者</p>
+</blockquote>
+<p>一般可以用来在开头注释，标注讲稿内容。</p>
+<h4 id="表格"><a class="header" href="#表格"><strong>表格</strong></a></h4>
+<p>可以使用一些符号来直接制作文本表格</p>
+<pre><code>|name | gender
+----- | -
+wzj |    boy
+c.c | girl
+</code></pre>
+<p>输出结果：
+| name | gender |
+| ---- | ------ |
+| wzj  | boy    |
+| C.C  | gir    |</p>
+<p><strong>注</strong> ：不同的<code>markdown</code>编辑器，语法也会有所不同，表格的书写方式可能不一样</p>
+<h2 id="其他github支持的语法"><a class="header" href="#其他github支持的语法"><em>其他Github支持的语法</em></a></h2>
+<p>其他<code>Github</code>支持的语法可以看<a href="https://docs.github.com/cn/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Github Docs</a></p>
+<h2 id="对文件路径的理解"><a class="header" href="#对文件路径的理解"><em>对文件路径的理解</em></a></h2>
+<pre><code>1.[Github](https://github.com)
+2.查看[帮助文档](./doc/help.md)
+3.跳转到[具体语法](#具体语法)
+</code></pre>
+<p>第一种一般是在文本中插入网站。</p>
+<p>第二种是一种路径的写法，是相对路径，表示和当前md文件在同一个路径下的<code>doc</code>文件夹里的 <code>help.md</code> 文件,一般推荐写相对路径，只需要跟着总文件夹走。</p>
+<p>第三种是一种链接，跳转到当前文档的某个标题处。</p>
+<h2 id="添加目录"><a class="header" href="#添加目录"><em>添加目录</em></a></h2>
+<p>不少平台都支持使用<code>[toc]</code>来添加目录。你只需要输入<code>[toc]</code>，平台就会帮你自动渲染生成目录。但是也有一些平台不支持。</p>
+<h2 id="其他注意事项"><a class="header" href="#其他注意事项"><em>其他注意事项</em></a></h2>
+<p>为了排版的顺利，建议在每结束一段话之后进行回车（多于两个的连续回车会被当成一个回车）</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="简介.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="彻底理解类 Unix 系统的 GUI(转载).html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="conda command.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="Shell instruction .html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -230,10 +255,10 @@ https://docs.brew.sh</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="简介.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="彻底理解类 Unix 系统的 GUI(转载).html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="conda command.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="Shell instruction .html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

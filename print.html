@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="简介.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li class="chapter-item expanded "><a href="Homebrew code.html"><strong aria-hidden="true">2.</strong> Homebrew command</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">3.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html"><strong aria-hidden="true">4.</strong> 彻底理解类unix的gui（转载）</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="简介.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li class="chapter-item expanded "><a href="Homebrew code.html"><strong aria-hidden="true">2.</strong> Homebrew command</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">3.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html"><strong aria-hidden="true">4.</strong> 彻底理解类unix的gui（转载）</a></li><li class="chapter-item expanded "><a href="Markdown格式教程.html"><strong aria-hidden="true">5.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="Shell instruction .html"><strong aria-hidden="true">6.</strong> Linux Shell command</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -508,6 +508,212 @@ conda install --helo
 <li>KWin: https://zh.wikipedia.org/wiki/KWin <a href="https://muzing.top/posts/5360db82/#fnref:8">↩</a></li>
 <li>Mutter: https://zh.wikipedia.org/wiki/Mutter </li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="markdown格式教程"><a class="header" href="#markdown格式教程">Markdown格式教程</a></h1>
+<blockquote>
+<p>markdown格式的讲解</p>
+<p>面向初学者</p>
+<p>编写者：wzj</p>
+<p><a href="https://thu-ios.github.io/tutorials/lecture/markdown.html">参考网站</a> —— 作者：yxj</p>
+</blockquote>
+<p>[toc]</p>
+<h2 id="具体语法"><a class="header" href="#具体语法"><em>具体语法</em></a></h2>
+<h3 id="1关于标题"><a class="header" href="#1关于标题">1.关于标题</a></h3>
+<p>1～6个井号加一个空格再加上标题的名称
+标题的等级由<code>#</code>的数量来决定</p>
+<pre><code># 一级标题
+## 二级
+......
+###### 六级
+</code></pre>
+<h3 id="2关于文体"><a class="header" href="#2关于文体">2.关于文体</a></h3>
+<h4 id="加粗和斜体"><a class="header" href="#加粗和斜体"><strong>加粗和斜体</strong></a></h4>
+<p>可以使用*或者_来加粗和添加斜体</p>
+<pre><code class="language-swift">*hello world*
+_hello world_
+
+**hello world**
+__hello world__
+</code></pre>
+<p>输出样子：
+<em>hello world</em>
+<em>hello world</em></p>
+<p><strong>hello world</strong>
+<strong>hello world</strong></p>
+<p>注意：*或者_之间不能有空格，不然会失效。</p>
+<h3 id="3链接语法"><a class="header" href="#3链接语法">3.链接语法</a></h3>
+<h4 id="链接网站"><a class="header" href="#链接网站"><strong>链接网站</strong></a></h4>
+<p><code>[题目](网站链接)</code> :中括号和小括号结合</p>
+<pre><code>[github](https://github.com)
+</code></pre>
+<p>输出结果：
+<a href="https://github.com">github</a></p>
+<h4 id="直接标出网站"><a class="header" href="#直接标出网站"><strong>直接标出网站</strong></a></h4>
+<pre><code>&lt;https://github.com&gt;
+</code></pre>
+<p>输出结果：
+<a href="https://github.com">https://github.com</a></p>
+<h4 id="链接图片"><a class="header" href="#链接图片"><strong>链接图片</strong></a></h4>
+<p><code>![自己选择写不写] (网站)</code>
+这里<code>[]</code>内部可以不写任何文字，也可以输出，写了的话会在图片下方或某处显示说明，当因为某种原因图片无法加载的时候，显示时也会用说明替代图片。</p>
+<pre><code>![iphone13 pro](https://www.apple.com.cn/v/iphone-13-pro/f/images/overview/design/design_display_pro__d3dtminb414y_small_2x.png)
+</code></pre>
+<p>输出结果：
+<img src="https://www.apple.com.cn/v/iphone-13-pro/f/images/overview/design/design_display_pro__d3dtminb414y_small_2x.png" alt="iphone13 pro" /></p>
+<h3 id="4行内代码"><a class="header" href="#4行内代码">4.行内代码</a></h3>
+<h4 id="行内代码标注某一个"><a class="header" href="#行内代码标注某一个"><strong>行内代码，标注某一个</strong></a></h4>
+<p>使用英文标点符号   <strong>`</strong> ,在tab上面</p>
+<pre><code class="language-swift">`swift`和`github`都是大大的好东西 
+</code></pre>
+<p><code>swift</code>和<code>github</code>都是大大的好东西</p>
+<h4 id="注释代码块"><a class="header" href="#注释代码块"><strong>注释代码块</strong></a></h4>
+<p>一对，三个，英文符号  <strong>`</strong>  来包裹代码块，还可以第一个反撇后面添加语言来获得高亮支持</p>
+<p>```swift
+var natural_number: Arrary<Int> = [0,1,2,3]
+print(natural_numbers.capacity)
+```</p>
+<pre><code class="language-swift">var natural_number: Arrary&lt;Int&gt; = [0,1,2,3]
+print(natural_numbers.capacity)
+
+</code></pre>
+<p>支持高亮的代码很多，比如：<code>shell</code>,<code>c</code>,<code>c++</code>,<code>java</code>,<code>python</code>,<code>swift</code>,<code>html</code>.</p>
+<h4 id="引用的格式"><a class="header" href="#引用的格式"><strong>引用的格式</strong></a></h4>
+<pre><code>&gt;markdown的格式讲解
+&gt;面向初学者
+</code></pre>
+<blockquote>
+<p>markdown的格式讲解
+面向初学者</p>
+</blockquote>
+<p>一般可以用来在开头注释，标注讲稿内容。</p>
+<h4 id="表格"><a class="header" href="#表格"><strong>表格</strong></a></h4>
+<p>可以使用一些符号来直接制作文本表格</p>
+<pre><code>|name | gender
+----- | -
+wzj |    boy
+c.c | girl
+</code></pre>
+<p>输出结果：
+| name | gender |
+| ---- | ------ |
+| wzj  | boy    |
+| C.C  | gir    |</p>
+<p><strong>注</strong> ：不同的<code>markdown</code>编辑器，语法也会有所不同，表格的书写方式可能不一样</p>
+<h2 id="其他github支持的语法"><a class="header" href="#其他github支持的语法"><em>其他Github支持的语法</em></a></h2>
+<p>其他<code>Github</code>支持的语法可以看<a href="https://docs.github.com/cn/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Github Docs</a></p>
+<h2 id="对文件路径的理解"><a class="header" href="#对文件路径的理解"><em>对文件路径的理解</em></a></h2>
+<pre><code>1.[Github](https://github.com)
+2.查看[帮助文档](./doc/help.md)
+3.跳转到[具体语法](#具体语法)
+</code></pre>
+<p>第一种一般是在文本中插入网站。</p>
+<p>第二种是一种路径的写法，是相对路径，表示和当前md文件在同一个路径下的<code>doc</code>文件夹里的 <code>help.md</code> 文件,一般推荐写相对路径，只需要跟着总文件夹走。</p>
+<p>第三种是一种链接，跳转到当前文档的某个标题处。</p>
+<h2 id="添加目录"><a class="header" href="#添加目录"><em>添加目录</em></a></h2>
+<p>不少平台都支持使用<code>[toc]</code>来添加目录。你只需要输入<code>[toc]</code>，平台就会帮你自动渲染生成目录。但是也有一些平台不支持。</p>
+<h2 id="其他注意事项"><a class="header" href="#其他注意事项"><em>其他注意事项</em></a></h2>
+<p>为了排版的顺利，建议在每结束一段话之后进行回车（多于两个的连续回车会被当成一个回车）</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shell"><a class="header" href="#shell"><strong>Shell</strong></a></h1>
+<p>[toc]</p>
+<h2 id="基本命令"><a class="header" href="#基本命令">基本命令</a></h2>
+<h3 id="1which"><a class="header" href="#1which">1.which</a></h3>
+<p>查看shell使用的路径</p>
+<h3 id="2where"><a class="header" href="#2where">2.where</a></h3>
+<p>查看shell所有的路径</p>
+<h3 id="3echo"><a class="header" href="#3echo">3.echo</a></h3>
+<p>返回输入值/如果是变量，会返回路径（冒号外加汉字只返回汉字）</p>
+<h3 id="4history"><a class="header" href="#4history">4.history</a></h3>
+<p>查看过去的命令历史，输入数字可以查看条数（histoty -5 可查看过去的五条）</p>
+<h3 id="5data"><a class="header" href="#5data">5.data</a></h3>
+<p>查看日期，不是内建命令</p>
+<h3 id="6pwd"><a class="header" href="#6pwd">6.pwd</a></h3>
+<p>显示当前所在目录</p>
+<p>shell当前工作路径的节选</p>
+<table><thead><tr><th>.    当前目录</th></tr></thead><tbody>
+<tr><td>..   上一个目录</td></tr>
+<tr><td>…  上上一个目录</td></tr>
+<tr><td>-   前一个目录</td></tr>
+<tr><td>～ 家目录</td></tr>
+</tbody></table>
+<h3 id="7cd"><a class="header" href="#7cd">7.cd</a></h3>
+<p>改变shell工作目录/与shell当前路径可结合使用</p>
+<h3 id="8ls"><a class="header" href="#8ls">8.ls</a></h3>
+<p>**列出当前文件夹所有文件 **</p>
+<p>ls -a   列出包括隐藏的文件</p>
+<p>ls -l    查看权限</p>
+<h3 id="9cat"><a class="header" href="#9cat">9.cat</a></h3>
+<p>显示一个文件内容</p>
+<h3 id="10clear"><a class="header" href="#10clear">10.clear</a></h3>
+<p>清空</p>
+<h3 id="11mkdir"><a class="header" href="#11mkdir">11.mkdir</a></h3>
+<p>当前目录创建文件夹</p>
+<h3 id="12touch"><a class="header" href="#12touch">12.touch</a></h3>
+<p>创建文本文件</p>
+<h3 id="13rm"><a class="header" href="#13rm">13.rm</a></h3>
+<p>从硬盘移除文件（不可在回收站找回）</p>
+<p>rm -d  移除文件夹</p>
+<p>rm -rf  ⚠️慎用，删库跑路</p>
+<h3 id="14mv"><a class="header" href="#14mv">14.mv</a></h3>
+<p>移动文件</p>
+<p>（mv  xxxx  zzz）  是将xxx移动到zzz</p>
+<h3 id="15cp"><a class="header" href="#15cp">15.cp</a></h3>
+<p>复制文件</p>
+<p>（cp  xxxx  zzz）  将xxx复制且改名为zzz</p>
+<h3 id="16man"><a class="header" href="#16man">16.man</a></h3>
+<p>查看帮助文档</p>
+<p>—help （两个’’-‘’，man无法使用的备用）</p>
+<h3 id="17ps-kill"><a class="header" href="#17ps-kill">17.ps kill</a></h3>
+<p>关于进程，ps查看，可以百度作用</p>
+<h2 id="其他shell操作"><a class="header" href="#其他shell操作">其他Shell操作</a></h2>
+<h3 id="1输出流重定义"><a class="header" href="#1输出流重定义"><strong>1.输出流重定义</strong></a></h3>
+<p><strong>在终端用命令创建本文及添加内容/echo</strong></p>
+<p><strong>需要注意初次添加和再次添加的区别</strong></p>
+<pre><code class="language-shell"> touch wm.txt
+ vim wm.txt
+</code></pre>
+<p>添加完文本后再次添加，一种是vim进去继续添加，另外一种是echo xxx &gt;&gt; wm.txt 这表示将xxx添加进wm.txt文本的末尾</p>
+<h3 id="2d"><a class="header" href="#2d"><strong>2.⌃D</strong></a></h3>
+<p>退出当前的shell</p>
+<h3 id="3文件和文件夹权限"><a class="header" href="#3文件和文件夹权限"><strong>3.文件和文件夹权限</strong></a></h3>
+<p><strong>1.chmod</strong></p>
+<p>使用<code>chmod</code>修改文件和文件夹权限（<code>chmod</code>,<code>change mode</code>,修改文件，文件夹权限）</p>
+<ul>
+<li><strong>文字设定法</strong></li>
+</ul>
+<pre><code class="language-shell">$ chmod [u][g][o][a]  [+|-|=] [rwx] file
+$ chmod  ug+w,O-x              a.txt  # owner及同组增加写权限，其他用户删除执行权限
+</code></pre>
+<p><code>u</code>：owner		<code>g</code>:同组用户		<code>o</code>:其他用户		<code>a</code>:所有用户</p>
+<p><code>r</code>:  read		  <code>w</code>:write				<code>x</code>:excute</p>
+<ul>
+<li><strong>数字设定法</strong></li>
+</ul>
+<pre><code class="language-shell">$ chmod [mode] file
+$ chmod  644   my.txt  #owner可读写，同组和其他用户只可读
+</code></pre>
+<p><code>mode</code>为3位八进制数，每位由各权限按权重相加得到。从左往右owner、同组、其他用户权限</p>
+<p><code>rwx</code>对应的权重分别是<code>4</code>,<code>2</code>,<code>1</code></p>
+<p><code>rwx</code>分别占据三位</p>
+<pre><code class="language-shell">u = 6 = 4+2 = r+w #owner可读可写
+</code></pre>
+<p>**注：**在使用此命令是，权限少给一点</p>
+<p><strong>2.xattr</strong></p>
+<p>macOS 中安装一些修改版或破解版软件，由于系统识别到这个 app 可能有问题所以给它加上了 com.apple.quarantine 隔离属性阻止了他的运行。
+如果我们需要运行它，就需要删除 app 的 com.apple.quarantine 属性，可以使用 xattr 来处理。</p>
+<pre><code class="language-shell">例子:xmind无法打开
+sudo xattr -r -d com.apple.quarantine /Applications/XMind.app
+</code></pre>
+<h3 id="4查看dns"><a class="header" href="#4查看dns">4.查看Dns</a></h3>
+<ul>
+<li><strong>使用命令 nslookup</strong></li>
+</ul>
+<pre><code class="language-shell">$ nslookup store.chanjet.com
+</code></pre>
+<ul>
+<li><strong>查看文件/etc/resolv.conf</strong></li>
+</ul>
+<pre><code class="language-shell">$ cat /etc/resolv.conf
+</code></pre>
+<h2 id="shell脚本"><a class="header" href="#shell脚本">shell脚本</a></h2>
 
                     </main>
 
