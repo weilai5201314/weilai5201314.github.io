@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Mysql - weilai</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="简介.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li class="chapter-item expanded "><a href="Homebrew code.html"><strong aria-hidden="true">2.</strong> Homebrew command</a></li><li class="chapter-item expanded "><a href="conda command.html"><strong aria-hidden="true">3.</strong> python环境配置及conda</a></li><li class="chapter-item expanded "><a href="彻底理解类 Unix 系统的 GUI(转载).html"><strong aria-hidden="true">4.</strong> 彻底理解类unix的gui（转载）</a></li><li class="chapter-item expanded "><a href="Markdown格式教程.html"><strong aria-hidden="true">5.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="Shell instruction .html"><strong aria-hidden="true">6.</strong> Linux Shell command</a></li><li class="chapter-item expanded "><a href="Mysql.html" class="active"><strong aria-hidden="true">7.</strong> Mysql</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">weilai</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="数据库笔记"><a class="header" href="#数据库笔记">数据库笔记</a></h1>
+<blockquote>
+<p>数据库==database</p>
+<p>数据库管理系统==DBMS（database management system）</p>
+<p>关系数据库==RDB（relational database）</p>
+</blockquote>
+<p>[toc]</p>
+<h1 id="1数据库基本信息"><a class="header" href="#1数据库基本信息">1.数据库基本信息</a></h1>
+<h2 id="一数据库种类"><a class="header" href="#一数据库种类">一、数据库种类</a></h2>
+<p>​	数据库以<strong>数据保管形式</strong>区分，有五种。</p>
+<h3 id="层次数据库-hdb"><a class="header" href="#层次数据库-hdb">层次数据库 HDB</a></h3>
+<h3 id="关系数据库-rdb"><a class="header" href="#关系数据库-rdb">关系数据库 RDB</a></h3>
+<h3 id="面向对象数据库-oodb"><a class="header" href="#面向对象数据库-oodb">面向对象数据库 OODB</a></h3>
+<p>​	配合面向对象的编程语言，用来保管<strong>对象</strong>的数据库。</p>
+<h3 id="xml数据库"><a class="header" href="#xml数据库">XML数据库</a></h3>
+<h3 id="键值存储系统"><a class="header" href="#键值存储系统">键值存储系统</a></h3>
+<h2 id="二数据库结构"><a class="header" href="#二数据库结构">二、数据库结构</a></h2>
+<ul>
+<li>关系数据库以<strong>行</strong>为单位读写数据</li>
+</ul>
+<h2 id="三sql摘要"><a class="header" href="#三sql摘要">三、SQL摘要</a></h2>
+<blockquote>
+<p>SQl是操作<strong>关系数据库</strong>的<strong>语言</strong>，是一门语言</p>
+<p>一般以分号结尾</p>
+<p>不同的RDBMS有不用的sql标准</p>
+<p>sql根据目的分为DDL，DML，DCL</p>
+</blockquote>
+<h3 id="sql语句及种类"><a class="header" href="#sql语句及种类">SQL语句及种类</a></h3>
+<ul>
+<li>DDL		创建删除</li>
+</ul>
+<pre><code class="language-mysql">create:创建数据库和表等对象
+drop：删除数据库和表等对象
+alter：修改数据库和表等对象的结构
+</code></pre>
+<ul>
+<li>DML		查询更改</li>
+</ul>
+<pre><code class="language-mysql">select:查询数据
+insert:插入新数据
+update:更新数据
+delete:删除数据
+</code></pre>
+<ul>
+<li>DCL		确认取消变更，设定权限</li>
+</ul>
+<pre><code class="language-mysql">commit:确认对数据库中的数据进行变更
+rollback：取消变更
+grant：赋予权限
+revoke：取消权限
+</code></pre>
+<h3 id="sql书写规则"><a class="header" href="#sql书写规则">SQL书写规则</a></h3>
+<ul>
+<li>
+<p><strong>分号<code>;</code>结尾</strong></p>
+</li>
+<li>
+<p><strong>关键词不区别大小写</strong></p>
+</li>
+<li>
+<p><strong>常数的书写</strong></p>
+<ul>
+<li>
+<p>sql语句含有<strong>字符串</strong></p>
+<p>书写规则是<code> 'abc'</code>，使用<strong>单引号</strong>括起来，表示字符串</p>
+</li>
+<li>
+<p>含有<strong>日期</strong></p>
+<p>使用<strong>单引号</strong>括起来，日期的格式有很多种，像<code>26 JUN 2010</code>或者<code>10/01/26</code>等，一般统一使用<code>2010-01-26</code>这种**<code>年-月-日</code>**的格式。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>数字无格式</strong></p>
+</li>
+</ul>
+<h2 id="四表的创建"><a class="header" href="#四表的创建">四、表的创建</a></h2>
+<h3 id="创建数据库"><a class="header" href="#创建数据库">创建数据库</a></h3>
+<pre><code class="language-mysql">create database &lt;xxx&gt;;
+create database shop;
+</code></pre>
+<h3 id="表的创建"><a class="header" href="#表的创建">表的创建</a></h3>
+<pre><code class="language-mysql">create table &lt;xxx&gt;
+(&lt;列1名称&gt; &lt;数据类型&gt; &lt;该列所需约束&gt;,
+ &lt;列2名称&gt; &lt;数据类型&gt; &lt;所需约束&gt;，
+	...      ...       ...     
+ 
+ &lt;该表的约束1&gt;，&lt;该表的约束2&gt;，......);
+</code></pre>
+<pre><code class="language-mysql">create table product
+(product_id		 			CHAR(4)		      not null,
+ product_name  			VARCHAR(100)    not null,
+ product_type  			VARCHAR(32)     not null,
+ sale_price    			INTEGER         ,
+ purchase_price			INTEGER			  	,
+ regist_date				DATE						,
+ primary key (product_id));
+</code></pre>
+<p>⚠️:如果复制粘贴进shell，记得注意<strong>字段名称</strong>和<strong>字段类型</strong>是否粘在一起。</p>
+<pre><code>例子：
+在文本栏： purchase_price INTEGER,
+shell ：  pruchase_priceINTEGER,
+</code></pre>
+<p>如果粘在一起就会报错，所以最好一行一行复制进去，观察是否出现复制错误。</p>
+<h3 id="命名规则"><a class="header" href="#命名规则">命名规则</a></h3>
+<ul>
+<li>只能使用<strong>半角英文字母</strong>、<strong>数字</strong>、<strong>下划线</strong>作为数据库、表的名称。</li>
+<li>名称以<strong>半角英文字母开头</strong>。</li>
+<li>名称不能重复。</li>
+</ul>
+<h3 id="数据类型"><a class="header" href="#数据类型">数据类型</a></h3>
+<ul>
+<li>
+<p>integer：整数类型（不能存储小数）</p>
+</li>
+<li>
+<p>char：需要指定最大长度，类似<code>char(20)</code>这样，是<strong>定长字符串</strong>。如果字符串未达到最大长度，会用空格补全。</p>
+</li>
+<li>
+<p>varchar：存储字符串，需要指定长度<code>varchar(20)</code>，但是是<strong>可变长字符串</strong>，不会用空格补全。</p>
+</li>
+<li>
+<p>date：</p>
+</li>
+</ul>
+<h3 id="约束设置"><a class="header" href="#约束设置">约束设置</a></h3>
+<p>指的是对<strong>列</strong>中数据，限制和追加条件。</p>
+<pre><code class="language-mysql">product_id		char(4)		not null,
+</code></pre>
+<p><code>not null</code>：<code>null</code>是空白，加上<code>not</code>表示该列的设置为不能输入空白。</p>
+<pre><code class="language-mysql">primary key (product_id)
+</code></pre>
+<p>这是给<code>product_id</code>设置<strong>主键约束</strong>，指特定一行数据，唯一确定一行数据。</p>
+<h2 id="五表的删除和更新"><a class="header" href="#五表的删除和更新">五、表的删除和更新</a></h2>
+<h3 id="表的删除"><a class="header" href="#表的删除">表的删除</a></h3>
+<pre><code class="language-mysql">drop table &lt;xxx&gt;;
+</code></pre>
+<p>⚠️:删除的表<strong>无法恢复</strong>，使用<code>drop</code>请务必注意。</p>
+<h3 id="表定义的更新"><a class="header" href="#表定义的更新">表定义的更新</a></h3>
+<ul>
+<li>添加列的语法</li>
+<li>alter 就是变更</li>
+</ul>
+<pre><code class="language-mysql">alter table &lt;表名&gt; add column &lt;列的定义&gt;;
+alter table product add column product_name_pinyin varchar(100);
+</code></pre>
+<ul>
+<li>删除表中某列</li>
+</ul>
+<pre><code class="language-mysql">alter table &lt;表名&gt; drop column &lt;列名&gt;;
+alter table product drop column product_name_pinyin;
+</code></pre>
+<p>⚠️:变更之后无法恢复。</p>
+<h3 id="向表中插入数据"><a class="header" href="#向表中插入数据">向表中插入数据</a></h3>
+<ul>
+<li>在mysql中使用<code>start transaction;</code>来进行插入。</li>
+<li>用<code>commit;</code>来结束。</li>
+</ul>
+<pre><code class="language-mysql">start transaction;
+
+insert into product values ('0001','Tshirt','衣服',1000,500, '2009-09-20');
+insert into product values ('0002','打孔器','办公文具',500, 320,'2009-09-11');
+  					......					......							....
+  					
+insert into &lt;表名&gt;  values (   &lt;各种格式的数据&gt;  );
+
+commit;
+</code></pre>
+<p>不同的表，开始插入的写法都不一样，结尾都需要<code>commit</code>。</p>
+<h3 id="表名的修改"><a class="header" href="#表名的修改">表名的修改</a></h3>
+<p>各种数据库修改表名的写法不一样，本文展示mysql的写法。</p>
+<pre><code class="language-mysql">rename table &lt;修改前&gt; to &lt;修改后&gt;;
+</code></pre>
+<h1 id="2查询语法"><a class="header" href="#2查询语法">2.查询语法</a></h1>
+<h2 id="一select语句"><a class="header" href="#一select语句">一、SELECT语句</a></h2>
+<h3 id="列的查询"><a class="header" href="#列的查询">列的查询</a></h3>
+<ul>
+<li>select</li>
+</ul>
+<pre><code class="language-mysql">select &lt;列名1&gt;,....&lt;列名n&gt;
+from &lt;表名&gt;；
+</code></pre>
+<ul>
+<li>修改列的名称</li>
+<li>as</li>
+</ul>
+<pre><code class="language-mysql">select &lt;列名1&gt; as &lt;自己构思的别名&gt; ,
+			 &lt;列名2&gt; as &lt;别称2&gt;
+from &lt;表名&gt;;
+</code></pre>
+<pre><code class="language-mysql">select product_id as id,
+		   product_name as xxx2
+from product;
+
+$ 或者使用中文别名,中文需要`&quot;&quot;`括起来.
+select xxx as &quot;中文别名&quot;
+from xxx;
+</code></pre>
+<p>输出:</p>
+<div class="table-wrapper"><table><thead><tr><th>id</th><th>xxx2</th></tr></thead><tbody>
+<tr><td>xxx1</td><td>xxx2</td></tr>
+</tbody></table>
+</div>
+<h3 id="查询表中所有的列"><a class="header" href="#查询表中所有的列">查询表中所有的列</a></h3>
+<pre><code class="language-mysql">select *
+from &lt;表名&gt;;
+</code></pre>
+<p>使用<code>*</code>无法自定义显示的列的顺序</p>
+<h3 id="常数的查询"><a class="header" href="#常数的查询">常数的查询</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Shell instruction .html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Shell instruction .html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
