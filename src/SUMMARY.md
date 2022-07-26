@@ -6,3 +6,4 @@
 - [彻底理解类unix的gui（转载）](彻底理解类%20Unix%20系统的%20GUI(转载).md)
 - [Markdown](Markdown格式教程.md)
 - [Linux Shell command](Shell%20instruction%20.md)
+- [Mysql](Mysql.md)
