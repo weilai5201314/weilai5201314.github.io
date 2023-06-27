@@ -1,4 +1,4 @@
-# Brew
+# Homebrew安装（mac版）
 [toc]
 ## 安装
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

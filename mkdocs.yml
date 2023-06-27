@@ -7,21 +7,36 @@ site_description: weilai的个人网站
 # [Navigtion]
 nav:
   - 博客:
-    - 构建:
-      - index.md
-  - 讲稿:
-    - markdown:
-      - Markdown格式教程.md
-    - 安装包:
-      - Homebrew code.md
-      - conda command.md
-  - school:
-    - mysql:
-      - Mysql.md
+    - BLOG/index.md
+    - 转载:
+      - BLOG/Forward/彻底理解类 Unix 系统的 GUI(转载).md
+      - BLOG/Forward/mac连接数据库（clion）.md
+    - School:
+      - BLOG/school/深度学习导论.md
+      - BLOG/school/Mysql.md
+
+
   - 开发:
+    - Develop/index.md
+    - 各种环境配置:
+      - Develop/Environment/如何初始化mysql.md
+      - Develop/Environment/conda command.md
+      - Develop/Environment/Homebrew code.md
     - Linux:
-      - 彻底理解类 Unix 系统的 GUI(转载).md
-      - Shell instruction.md
+      - Develop/Linux/Linux常见问题.md
+
+
+  - 讲稿:
+    - Lecture/index.md
+    - 基础技能:
+      - Lecture/Markdown格式教程.md
+      - Lecture/Shell instruction.md
+
+  - 随笔:
+    - Essay/index.md
+
+  - 网站:
+    - Website/index.md
   
 
 # [UI]
