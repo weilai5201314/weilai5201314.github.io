@@ -32,6 +32,11 @@ nav:
       - Lecture/Markdown格式教程.md
       - Lecture/Shell instruction.md
 
+  - 个人:
+    - Person/index.md
+    - Steam:
+      - Person/steam/Vrising 私服搭建.md
+
   - 随笔:
     - Essay/index.md
 
