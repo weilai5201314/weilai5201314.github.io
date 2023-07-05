@@ -187,7 +187,7 @@ Failed to connect to vrising-client.s3.eu-central-1.amazonaws.com port 443 after
 
 - 打开浏览器，打开<https://www.ipaddress.com/>，然后输入`vrising-client.s3.eu-central-1.amazonaws.com`来解析IP。
 - 打开`C:\Windows\System32\drivers\etc\hosts`。
-- 在最底下添加`xx.xx.xx.xx vrising-client.s3.eu-central-1.Amazonaws.com`，用你刚刚获取的IP替换xx。
+- 在最底下添加`xx.xx.xx.xx vrising-client.s3.eu-central-1.Amazonaws.com`，用你刚刚获取的IP替换`xx.xx.xx.xx`。
 
 ### 2.如何更新V rising
 
