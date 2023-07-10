@@ -9,8 +9,12 @@ nav:
   - 博客:
     - BLOG/index.md
     - 转载:
-      - BLOG/Forward/彻底理解类 Unix 系统的 GUI(转载).md
-      - BLOG/Forward/mac连接数据库（clion）.md
+      - BLOG/Reprint/彻底理解类 Unix 系统的 GUI(转载).md
+      - BLOG/Reprint/mac连接数据库（clion）.md
+    - Linux:
+      - BLOG/Linux/Linux常见问题.md
+    - Mac:
+      - BLOG/Mac/mac常见问题.md
     - School:
       - BLOG/school/深度学习导论.md
       - BLOG/school/Mysql.md
@@ -22,8 +26,7 @@ nav:
       - Develop/Environment/如何初始化mysql.md
       - Develop/Environment/conda command.md
       - Develop/Environment/Homebrew code.md
-    - Linux:
-      - Develop/Linux/Linux常见问题.md
+    
 
 
   - 讲稿:
