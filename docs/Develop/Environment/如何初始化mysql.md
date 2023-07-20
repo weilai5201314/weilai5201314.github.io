@@ -2,6 +2,8 @@
 
 > 适用版本：mysql 8.x.x
 
+## 安装mysql
+
 1.下载mysql压缩包，解压 (选择你的焊胃者版本)
 
 <https://downloads.mysql.com/archives/community/>
@@ -45,3 +47,28 @@ quit;
 mysql -u root -p
 
 ```
+
+## 卸载mysql
+
+>卸载mysql有两种，一种是只卸载服务，另一种是彻底卸载mysql。
+>
+>两种方法都需要先卸载服务。
+
+
+### 只卸载服务
+
+1.停止 MySQL 服务：在`管理员`的命令行中，运行以下命令停止 MySQL 服务：
+
+```shell
+net stop mysql
+```
+
+2.卸载 MySQL 服务：在`管理员`的命令行中，进入 MySQL 的 bin 目录，并运行以下命令来卸载 MySQL 服务：
+
+```shell
+mysqld --remove
+```
+
+### 完全卸载
+
+在卸载服务的情况下，删除mysql文件夹即可。
