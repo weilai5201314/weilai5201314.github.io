@@ -26,6 +26,7 @@ nav:
       - Develop/Environment/如何初始化mysql.md
       - Develop/Environment/conda command.md
       - Develop/Environment/Homebrew code.md
+      - Develop/Environment/EF Core连接Mysql(Rider).md
     
 
 
