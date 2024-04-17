@@ -1,64 +1,66 @@
 # [Info]
 site_name: Weilai的个人网站 # 左上角标题
-# site_url: https://yang-xijie.github.io
+site_url: https://weilai5201314.github.io
 site_author: weilai
 site_description: weilai的个人网站
 
 # [Navigtion]
 nav:
   - 博客:
-    - BLOG/index.md
-    - 转载:
-      - BLOG/Reprint/彻底理解类 Unix 系统的 GUI(转载).md
-      - BLOG/Reprint/mac连接数据库（clion）.md
-    - Linux:
-      - BLOG/Linux/Linux常见问题.md
-    - Mac:
-      - BLOG/Mac/mac常见问题.md
-    - School:
-      - BLOG/school/深度学习导论.md
-      - BLOG/school/Mysql.md
+      - BLOG/index.md
+      - 转载:
+          - BLOG/Reprint/彻底理解类 Unix 系统的 GUI(转载).md
+          - BLOG/Reprint/mac连接数据库（clion）.md
+      - Linux:
+          - BLOG/Linux/Linux常见问题.md
+      - Mac:
+          - BLOG/Mac/mac常见问题.md
+      - School:
+          - BLOG/school/深度学习导论.md
+          - BLOG/school/Mysql.md
+          - BLOG/school/电子取证.md
 
 
   - 开发:
-    - Develop/index.md
-    - 各种环境配置:
-      - Develop/Environment/如何初始化mysql.md
-      - Develop/Environment/conda command.md
-      - Develop/Environment/Homebrew code.md
-      - Develop/Environment/EF Core连接Mysql(Rider).md
-    
+      - Develop/index.md
+      - 各种环境配置:
+          - Develop/Environment/如何初始化mysql.md
+          - Develop/Environment/conda command.md
+          - Develop/Environment/Homebrew code.md
+          - Develop/Environment/EF Core连接Mysql(Rider).md
+      - 其他问题:
+          - Develop/其他问题/跨域问题.md
 
 
   - 讲稿:
-    - Lecture/index.md
-    - 基础技能:
-      - Lecture/Markdown格式教程.md
-      - Lecture/Shell instruction.md
+      - Lecture/index.md
+      - 基础技能:
+          - Lecture/Markdown格式教程.md
+          - Lecture/Shell instruction.md
 
   - 个人:
-    - Person/index.md
-    - Steam:
-      - Person/steam/Vrising 私服搭建.md
-      - Person/steam/428结局.md
+      - Person/index.md
+      - Steam:
+          - Person/steam/Vrising 私服搭建.md
+          - Person/steam/428结局.md
 
   - 随笔:
-    - Essay/index.md
-    - 泣き笑:
-      - Essay/泣き笑/夏日重现的恍惚.md
+      - Essay/index.md
+      - 泣き笑:
+          - Essay/泣き笑/夏日重现的恍惚.md
 
 
   - 网站:
-    - Website/index.md
-    - Website/个人介绍.md
-  
+      - Website/index.md
+      - Website/个人介绍.md
+
 
 # [UI]
 ## [top]
 theme:
   name: material
   palette:
-    - scheme: slate 
+    - scheme: slate
       primary: indigo # 上方的
       accent: orange # 链接等可交互元件的高亮色
       toggle:
@@ -101,7 +103,7 @@ extra:
 # [Extensions]
 plugins:
   - search: # 现在还不支持中文搜索 支持之后可以设置语言
-    # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
+      # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
       lang:
         - en
         - ja
@@ -113,8 +115,8 @@ markdown_extensions:
   - toc:
       permalink: true # 固定标题位置为当前位置
   - pymdownx.highlight: # 代码块高亮
-      # linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
+    # linenums: true # 显示行号
+    # auto_title: true # 显示编程语言名称
   - pymdownx.superfences # 代码块高亮插件
   - meta # 支持Markdown文件上方自定义标题标签等
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks

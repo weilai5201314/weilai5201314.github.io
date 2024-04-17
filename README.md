@@ -6,7 +6,8 @@
 
 环境配置：
 
-- 换源: `-i https://pypi.tuna.tsinghua.edu.cn/simple`
+- 可能会有些前置依赖，缺啥下啥
+- 换源地址: `-i https://pypi.tuna.tsinghua.edu.cn/simple`
 
 ```shell
 pip install mkdocs  
