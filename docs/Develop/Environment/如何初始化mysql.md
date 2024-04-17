@@ -1,6 +1,6 @@
 # 如何初始化mysql
 
-> 适用版本：mysql 8.x.x
+> 适用版本：mysql 8.0.32
 
 ## 安装mysql
 
@@ -12,7 +12,8 @@
 
 3.初始化 MySQL 数据目录：
 
-在命令行中，进入 MySQL 的bin目录，运行以下命令来初始化 MySQL 的数据目录（此命令创建的数据库`没有`密码，因此请连贯运行后续步骤）：
+- 在命令行中，进入 MySQL 的bin目录，运行以下命令来初始化 MySQL 的数据目录（
+- 此命令创建的数据库`没有`密码，因此请连贯运行后续步骤
 
 ```shell
 mysqld --initialize-insecure
@@ -20,7 +21,7 @@ mysqld --initialize-insecure
 
 4.安装 MySQL 服务：
 
-在命令行中，继续运行以下命令来安装 MySQL 服务：
+- 在命令行中，继续运行以下命令来安装 MySQL 服务：
 
 ```shell
 mysqld --install
@@ -28,7 +29,7 @@ mysqld --install
 
 5.启动 MySQL 服务：
 
-在命令行中，运行以下命令来启动 MySQL 服务：
+- 在命令行中，运行以下命令来启动 MySQL 服务：
 
 ```shell
 net start mysql
